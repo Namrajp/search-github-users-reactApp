@@ -1,12 +1,13 @@
 name: Testing the app
 on: [push]
 jobs:
-  testing: #searchgithubapp
+  testing: 
   name: Testing
   runs-on: ubuntu-latest
   steps:
-    -uses: actions/checkout@v2
-    -name: Install dependencies
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Install dependencies
       run: npm install 
-    -name: Run the tests
+    - name: Run the tests
       run: npm test
